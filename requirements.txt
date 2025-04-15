@@ -1,0 +1,7 @@
+pyrogram>=2.0.0
+TgCrypto>=1.2.5
+Pillow>=9.0.0
+python-dotenv>=0.21.0
+beautifulsoup4>=4.10.0
+requests>=2.27.1
+aiohttp>=3.8.1
