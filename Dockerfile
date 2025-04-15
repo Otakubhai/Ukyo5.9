@@ -4,26 +4,28 @@ FROM python:3.11-slim
 # Set working dir inside container
 WORKDIR /app
 
-# Install system dependencies (for pyrogram, pillow, etc.)
+# Install system dependencies (for pyrogram, pillow, ffmpeg, etc.)
 RUN apt update && apt install -y \
     ffmpeg \
     libglib2.0-0 \
     libsm6 \
     libxext6 \
     libxrender-dev \
-    && rm -rf /var/lib/apt/lists/*
+    && apt clean && rm -rf /var/lib/apt/lists/*
 
-# Copy only requirements first to cache layers
+# Copy requirements.txt and install dependencies
 COPY requirements.txt .
 
-# Install Python deps
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Now copy rest of the code
+# Copy the entire source code
 COPY . .
 
-# If you use .env, install dotenv
+# (Optional) Install dotenv if you're using .env files
 RUN pip install python-dotenv
 
-# Run the bot (you can change this to another file if entry is different)
+# Set environment variables from .env file (if used)
+ENV PYTHONUNBUFFERED=1
+
+# Start the bot
 CMD ["python", "merged_bot.py"]
