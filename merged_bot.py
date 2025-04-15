@@ -278,7 +278,7 @@ async def process_anime_format(client, callback_query, chat_id, format_type):
 
     # Generate message text based on format type
     if format_type == "hanime":
-        message_text = f"<b>💦 {title}\n╭──────────────────────\n├ 📺 Episode : {anime['episodes'] or 'N/A'}\n├ 💾 Quality : {quality}\n├ 🎭 Genres: {genres_text}\n├ 🔊 Audio track : Sub\n├ #Censored\n├ #Recommendation +++++++\n╰──────────────────────</b>"
+        message_text = f"<b>💦 {title}\n╭──────────────────────\n├ 📺 Episode : {anime['episodes'] or 'N/A'}\n├ 💾 Quality : {quality}\n├ 🎭 Genres: {genres_text}\n├ 🔊 Audio track : Japanese [E-Sub]\n├ #Censored\n├ #Recommendation You React :)\n╰────────────────────── \n 🔥 Powered By @Den_of_Sins</b>"
     elif format_type == "otaku":
         message_text = f"""<b>💙 {title}</b>
 
