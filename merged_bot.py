@@ -283,6 +283,8 @@ async def process_anime_format(client, callback_query, chat_id, format_type):
         message_text = f"""<b>💙 {title}</b>
 
 <b>🎭 Genres :</b> {genres_text}
+<b>🎨 Tags :</b>
+
 <b>🔊 Audio :</b> Dual Audio
 <b>📡 Status :</b> Completed
 <b>🗓 Episodes :</b> {anime['episodes'] or 'N/A'}
