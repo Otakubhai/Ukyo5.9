@@ -23,7 +23,7 @@ API_HASH = os.getenv("API_HASH", "")
 BOT_TOKEN = os.getenv("BOT_TOKEN", "")
 
 # Allowed Users
-ALLOWED_USERS = {"1557539460", "6667553516", "5725206423", "6183939103", "2145252686"}
+ALLOWED_USERS = {"1557539460", "6667553516", "5725206423", "6183939103", "2145252686", "5833315376"}
 
 # Create the bot
 bot = Client("anime_multporn_bot", api_id=API_ID, api_hash=API_HASH, bot_token=BOT_TOKEN)
